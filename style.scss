@@ -1,0 +1,42 @@
+/*Colores de fondo*/
+$bg: linear-gradient(90deg, black 2%, #193248 70%, #193248 90%);
+$bg-card-uno:linear-gradient(90deg, black 2%, #7a0505 70%, #770000 90%);
+$bg-card-dos: linear-gradient(90deg, rgb(3, 14, 36) 2%, #120076 70%, #011876 90%);
+$bg-card-tres: linear-gradient(90deg, rgb(6, 26, 2) 2%, #0f7006 70%, #0faa01 90%);
+$bg-card-cuatro: linear-gradient(90deg, rgb(41, 0, 0) 2%, #7a0505 70%, #d10000 90%);
+$bg-card-cinco: linear-gradient(to right, #e3a301, #FFCC00);
+
+.bg-porfolio {background: $bg;}
+.bg-card-uno{background: $bg-card-uno;}
+.bg-card-dos {background: $bg-card-dos;}
+.bg-card-tres {background: $bg-card-tres;}
+.bg-card-cuatro {background: $bg-card-cuatro;}
+.bg-card-cinco {background: $bg-card-cinco;}
+
+/*color texto*/
+$text-nav: white;
+.t-white{color: $text-nav;}
+
+.nav-style {
+    display: flex;
+    justify-content: center; // Centra horizontalmente el contenido dentro del enlace
+    align-items: center; // Centra verticalmente el contenido dentro del enlace
+    color: white; // Cambia el color del texto a blanco
+    padding: 0.2rem 1rem; // Espaciado interno del enlace
+    border-radius: 15px; // Bordes redondeados
+    transform: translateY(2px); // Aplica una ligera transformación en el eje 
+    
+    &:hover {
+        background-color: #112430d6; // Color de fondo al pasar el cursor
+        padding: 0.2rem 0.5rem; // Ajusta el padding en hover
+        transform: translateY(3px); // Mantiene la posición
+        transition: all 0.3s ease; // Animación de transición
+    }
+}
+
+/*fijar navbar*/
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+/*removidos*/
+$theme-colors: map-remove($theme-colors, "info", "light", "primary", "secondary", "danger", "warning", "success" );
